@@ -1,0 +1,390 @@
+.main {
+    padding: 10px;
+    min-height: 100vh;
+  }
+
+  .layout {
+    display: flex;
+    padding: 20px;
+  }
+
+  .menu-icon{
+    display: none;
+  }
+
+  .sidebar {
+    height: 95vh;
+    width: 70vw;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #3C83F9;
+    box-shadow: 0 0 2px gray;
+    margin-right: 20px;
+    overflow-y: auto;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+  
+
+  .content {
+    width: 100%;
+    height: 100%;
+  }
+
+  .header {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .headerbox{
+    margin: 10px;
+    padding: 20px;
+  }
+
+  .headerbox1{
+    height: 15vh;
+    width: 26vw;
+    margin-left: 14px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 2px gray;
+    background-color: white;
+  }
+  .revenuePercent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .revenueStyle{
+    width: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 2px gray;
+    color: #4AD15F;
+    background-color: #E9F9EB;
+  }
+  .headerbox2{
+    height: 15vh;
+    width: 26vw;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 2px gray;
+    background-color: white;
+  }
+  .headerbox3{
+    height: 15vh;
+    width: 26vw;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 2px gray;
+    background-color: white;
+  }
+  .headerbox4{
+    height: 15vh;
+    width: 20vw;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 2px gray;
+    background-color: white;
+  }
+
+  .chartbox{
+    height: 35vh;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 2px gray;
+    background-color: white;
+    overflow: hidden;
+  }
+  .chartgraph{
+    height: 100%;
+    width: 80vw;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bodyheader{
+    display: flex;
+  }
+
+  .body1 {
+    /* display: flex; */
+    height: 30vh;
+    width: 41vw;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 2px gray;
+    background-color: white;
+  }
+  .donutchart{
+    height: 100%;
+    width: 50%;
+  }
+  .body1-tag{
+    margin-left: 30px;
+    height: 15%;
+    width: 100%;
+  }
+  .donutchart-header{
+    height: 80%;
+    display: flex;
+  }
+  .donutchart-data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+  }
+
+  .body2 {
+    height: 30vh;
+    width: 41vw;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 2px gray;
+    background-color: white;
+  }
+  .body2-style{
+    height: 100%;
+    width: 100%;
+  }
+  .button-style{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .formname{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .formname1{
+    margin-top: 20px;
+  }
+
+  .menu {
+    margin-top: 50px;
+  }
+
+  .logo h6 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 20px 0px;
+  }
+
+  .menu-item {
+    margin-top: 30px;
+  }
+  .menu-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  .menu-item i {
+    font-size: 1.2rem;
+    margin: 0 15px;
+  }
+  .active {
+    background-color: white;
+    padding: 10px;
+  }
+.active a,
+.active i {
+  color: rgb(106, 36, 192);
+}
+
+.headerup{
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerfirst{
+  justify-content: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    justify-content: flex-end;
+    margin: 0 15px;
+  }
+
+  .header-content i {
+    margin-right: 20px;
+    font-size: 1.2rem;
+  }
+  .header-content a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: blue;
+    margin: 0 10px;
+    text-transform: uppercase;
+  }
+
+  .button-border{
+    border-radius: 30px;
+    color: #999CA0;
+  }
+
+  .value-style{
+    width: 100%;
+    margin-left: 50px;
+    font-weight: lighter;
+  }
+
+  @media screen and (max-width: 1465px) {
+  
+    .sidebar {
+      display: none;
+    }
+  
+    .menu-icon {
+      display: inline;
+    }
+  
+    .logo > span {
+      display: inline;
+    }
+  }
+
+  @media screen and (max-width: 1219px) {
+    .header {
+      flex-wrap: wrap;
+    }
+    
+    .bodyheader {
+      flex-wrap: wrap;
+    }
+    /* Adjust the width of header boxes when wrapped (e.g., 50% for two boxes per row) */
+    .headerbox {
+      width: 100%; /* Adjust as needed based on the desired number of boxes per row */
+    }
+    .revenueStyle{
+      width: 20%;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+  
+    .menu-dashboard{
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .donutchart-data{
+      display: none;
+    }
+    .formname{
+      padding: 10px;
+    }
+    .donutchart-header{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .donutchart{
+      width: 70%;
+    }
+    .body1-tag{
+      margin-left: 1px;
+    }
+    .form-control{
+      display: none;
+    }
+    .rounded{
+      display: none;
+    }
+  }
+
+  .audioheader{
+    height: 50vh;
+    width: 80vw;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 2px gray;
+    background-color: white;
+  }
+
+  /* Add this CSS in your stylesheet */
+.audioheader table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .audioheader th, .audioheader td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px; /* Adjust the padding as needed for spacing */
+  }
+  
+  .audioheader th {
+    background-color: #f2f2f2;
+  }
+
+  .searchbar{
+    height: 5vh;
+    width: 80vw;
+    border-radius: 20px;
+    /* box-shadow: 0 0 2px gray; */
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+    margin-left: 0px;
+  }
+
+  .searchbar-content{
+    width: 100%;
+    margin-left: 20px;
+    /* box-shadow: 0 0 2px gray; */
+    background-color: white;
+  }
+
+  .search-name{
+    height: 8vh;
+    width: 80vw;
+    margin-top: 7px;
+    margin-left: 15px;
+    border-radius: 20px;
+    /* box-shadow: 0 0 2px gray; */
+    background-color: white;
+  }
+
+  .app-names{
+    height: 8vh;
+    width: 80vw;
+    margin-top: 7px;
+    border-radius: 20px;
+    /* box-shadow: 0 0 2px gray; */
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .app-name1{
+    border-radius: 20px;
+    padding: 10px;
+    width: 30vw;
+    /* box-shadow: 0 0 2px gray; */
+  }
+
+  .transcribfile{
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7vw;
+    /* box-shadow: 0 0 2px gray; */
+  }
