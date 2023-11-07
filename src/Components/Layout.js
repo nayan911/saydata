@@ -27,12 +27,12 @@ const Layout = () => {
     {
       name: "Home",
       path: "/home",
-      icon: "fa-solid fa-gauge-simple",
+      icon: "fa-solid fa-house",
     },
     {
       name: "All Files",
       path: "/appointments",
-      icon: "fa-solid fa-coins",
+      icon: "fa-regular fa-file",
     },
     {
       name: "Saved",
@@ -42,12 +42,12 @@ const Layout = () => {
     {
       name: "Integrations",
       path: `/user/profile`,
-      icon: "fa-solid fa-user",
+      icon: "fa-solid fa-share-nodes",
     },
     {
       name: "Trash",
       path: `/user/settings`,
-      icon: "fa-solid fa-gear",
+      icon: "fa-solid fa-trash",
     },
   ];
 
@@ -105,10 +105,11 @@ const Layout = () => {
                 );
               })}
               <div className={`menu-item `} onClick={handleLogout}>
-                <i className="fa-solid fa-right-from-bracket"></i>
+                <i className="fa-solid fa-circle-question"></i>
                 <Link to="/" style={{color: '#344054'}}>Help & support</Link>
               </div>
             </div>
+            please click to visit website
             <div className="upgrade">
                 <div className="upgrade-icon">
                     <i className="fa-solid fa-rocket" style={{fontSize: 30,color: '#0048AD'}}></i>
@@ -133,7 +134,7 @@ const Layout = () => {
                       </div>
                       <div className="profile-icon">
                         <div className="bell-icon"><i class="fa-regular fa-bell"></i></div>
-                        <div className="profile-icon-icon"><i class="fa-regular fa-user"></i></div>
+                        <div className="profile-icon-icon"><i class="fa-regular fa-circle-user"></i></div>
                       </div>
                     </div>
                 </div>
