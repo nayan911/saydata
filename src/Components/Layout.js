@@ -25,27 +25,27 @@ const Layout = () => {
 
   const SidebarMenu = [
     {
-      name: "Dashboard",
+      name: "Home",
       path: "/home",
       icon: "fa-solid fa-gauge-simple",
     },
     {
-      name: "Transactions",
+      name: "All Files",
       path: "/appointments",
       icon: "fa-solid fa-coins",
     },
     {
-      name: "Schedules",
+      name: "Saved",
       path: `/doctor/profile/`,
       icon: "fa-regular fa-calendar",
     },
     {
-      name: "Users",
+      name: "Integrations",
       path: `/user/profile`,
       icon: "fa-solid fa-user",
     },
     {
-      name: "Settings",
+      name: "Trash",
       path: `/user/settings`,
       icon: "fa-solid fa-gear",
     },
@@ -64,6 +64,23 @@ const Layout = () => {
   
     // Update the state with the modified array
     setSavedNotes(updatedNotes);
+  };
+
+  const downloadNoteAsText = (note) => {
+    const blob = new Blob([note], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+  
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'note.txt'; // Set the filename for the download
+  
+    // Trigger the download
+    document.body.appendChild(a);
+    a.click();
+  
+    // Cleanup
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   };
   
 
@@ -89,7 +106,7 @@ const Layout = () => {
               })}
               <div className={`menu-item `} onClick={handleLogout}>
                 <i className="fa-solid fa-right-from-bracket"></i>
-                <Link to="/" style={{color: '#344054'}}>Logout</Link>
+                <Link to="/" style={{color: '#344054'}}>Help & support</Link>
               </div>
             </div>
             <div className="upgrade">
@@ -110,7 +127,14 @@ const Layout = () => {
           <div className="content">
                 <div className="searchbar">
                     <div className="searchbar-content">
+                      <div className="searchbar-content-content">
+                        <i class="fa-solid fa-magnifying-glass"></i>
                         <input type="search" style={{ width: '400px' }} className="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                      </div>
+                      <div className="profile-icon">
+                        <div className="bell-icon"><i class="fa-regular fa-bell"></i></div>
+                        <div className="profile-icon-icon"><i class="fa-regular fa-user"></i></div>
+                      </div>
                     </div>
                 </div>
                 <div className="search-name">
@@ -178,7 +202,10 @@ const Layout = () => {
                         <td>{new Date().toLocaleString()}</td> {/* Replace with actual timestamp */}
                         <td>Audio</td> {/* Replace with actual file type */}
                         <td>
-                            <button onClick={() => handleDelete(index)}>Delete</button>
+                          <div className="delete-download">
+                            <div className="download-note"><button className="btn btn-primary" onClick={() => downloadNoteAsText(note)}>Download Note</button></div>
+                            <div className="delete-note"><button style={{width: '120px'}} className="btn btn-danger" onClick={() => handleDelete(index)}>Delete</button></div>
+                          </div>
                         </td>
                         </tr>
                     ))}

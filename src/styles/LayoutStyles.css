@@ -395,10 +395,29 @@
   }
 
   .searchbar-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     margin-left: 20px;
     /* box-shadow: 0 0 2px gray; */
     background-color: white;
+  }
+
+  .searchbar-content-content{
+    display: flex;
+    align-items: center;
+  }
+
+  .profile-icon{
+    width: 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+  }
+  .bell-icon{
+    margin-right: 10;
   }
 
   .search-name{
@@ -437,3 +456,19 @@
     width: 7vw;
     /* box-shadow: 0 0 2px gray; */
   }
+
+  .delete-download{
+    /* box-shadow: 0 0 2px gray; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .download-note{
+    margin-right: 20px;
+    /* box-shadow: 0 0 2px gray; */
+  }
+
+  /* .delete-note{
+    
+  } */
