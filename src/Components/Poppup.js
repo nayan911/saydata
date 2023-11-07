@@ -3,6 +3,7 @@ import { Dialog, DialogContent, DialogTitle } from '@material-ui/core';
 import { Tabs } from 'antd';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
+import "../styles/popupStyle.css";
 
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition
@@ -89,44 +90,42 @@ const Poppup = (props) => {
   return (
     <Dialog open={openpopup}>
       <DialogTitle style={{ width: 600 }}>
-        <div>Add New Profile</div>
+        <div><b>Transcribe File</b></div>
       </DialogTitle>
-      <DialogContent>
+      <DialogContent style={{height: 550}}>
         <Tabs>
-          <Tabs.TabPane tab="Basic" key={0}>
+          <Tabs.TabPane key={0}>
             {
               <>
-                <h1>Voice Notes</h1>
                 <div className="container">
                     <div className="box">
-                    <h2>Current Note</h2>
-                    {isListening ? <span>🎙️</span> : <span>🛑🎙️</span>}
-                    <button onClick={handleSaveNote} disabled={!note}>
-                        Save Note
-                    </button>
-                    <button onClick={() => setIsListening(prevState => !prevState)}>
-                        Start/Stop
-                    </button>
-                    <Select
-                    value={selectedLanguage}
-                    onChange={(event) => setSelectedLanguage(event.target.value)}
-                  >
-                    {languageOptions.map((option) => (
-                      <MenuItem key={option.code} value={option.code}>
-                        {option.name}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                    <p>{note}</p>
+                      <Select style={{width: 500}} value={selectedLanguage} onChange={(event) => setSelectedLanguage(event.target.value)}>
+                        {languageOptions.map((option) => (
+                          <MenuItem key={option.code} value={option.code}>
+                            {option.name}
+                          </MenuItem>
+                        ))}
+                      </Select>
                     </div>
-                    <div className="box">
-                    <h2>Notes</h2>
-                    {savedNotes.map(n => (
-                        <p key={n}>{n}</p>
-                    ))}
-                    </div>
-                    <button onClick={downloadNotes}>Download Notes</button>
-                    <button type="submit" class="btn btn-primary" onClick={()=>setopenpopup(false)}>Done</button>
+                      <div className='mic-onoff'>
+                        {isListening ? <span>🎙️</span> : <span>🛑🎙️</span>}
+                        <div className='mic-buttons'>
+                          <button style={{width: 200}} onClick={handleSaveNote} class="btn btn-primary" disabled={!note}>
+                              Save Note
+                          </button>
+                          <button style={{width: 200}} class="btn btn-primary" onClick={() => setIsListening(prevState => !prevState)}>
+                              Start/Stop
+                          </button>
+                        </div>
+                      </div>
+                        <div className='result-button'><b style={{fontSize: '20px'}}>Result:</b></div>
+                        <div className='display-note'>
+                          <p>{note}</p>
+                        </div>
+                        <div className='download-done'>
+                          <div><button onClick={downloadNotes} class="btn btn-primary" style={{width: 200}}>Download Notes</button></div>
+                          <div><button type="submit" class="btn btn-primary" style={{width: 200}} onClick={()=>setopenpopup(false)}>Done</button></div>
+                        </div>
                 </div>
               </>
             }

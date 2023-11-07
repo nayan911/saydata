@@ -73,7 +73,7 @@ const Layout = () => {
         <div className="layout">
           <div className="sidebar">
             <div className="logo">
-              <h6>abc firm</h6>
+              <h6 style={{color: '#0048AD'}}>abc firm</h6>
             </div>
             <div className="menu">
               {SidebarMenu.map((menu) => {
@@ -82,15 +82,29 @@ const Layout = () => {
                   <>
                     <div className={`menu-item`}>
                       <i className={menu.icon}></i>
-                      <Link to={menu.path} style={{color: 'black'}}>{menu.name}</Link>
+                      <Link to={menu.path} style={{color: '#344054'}}>{menu.name}</Link>
                     </div>
                   </>
                 );
               })}
               <div className={`menu-item `} onClick={handleLogout}>
                 <i className="fa-solid fa-right-from-bracket"></i>
-                <Link to="/" style={{color: 'black'}}>Logout</Link>
+                <Link to="/" style={{color: '#344054'}}>Logout</Link>
               </div>
+            </div>
+            <div className="upgrade">
+                <div className="upgrade-icon">
+                    <i className="fa-solid fa-rocket" style={{fontSize: 30,color: '#0048AD'}}></i>
+                </div>
+                <div className="upgrade-account">
+                    <b>Upgrade Account</b>
+                </div>
+                <div className="upgrade-access">
+                    Access to unlimited Transaction
+                </div>
+                <div className="upgrade-button">
+                    <button className="btn" style={{backgroundColor: '#0048AD', color: 'white'}} onClick={()=>{window.location.href = 'https://velvety-otter-b40823.netlify.app';}}><b style={{fontSize: '20px'}}>Upgrade File</b></button>
+                </div>
             </div>
           </div>
           <div className="content">

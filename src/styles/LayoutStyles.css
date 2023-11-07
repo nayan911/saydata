@@ -15,16 +15,15 @@
   .sidebar {
     height: 95vh;
     width: 70vw;
-    padding: 30px;
+    padding: 15px;
     border-radius: 20px;
-    background-color: #3C83F9;
+    /* background-color: #3C83F9; */
     box-shadow: 0 0 2px gray;
     margin-right: 20px;
     overflow-y: auto;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
   }
-  
 
   .content {
     width: 100%;
@@ -172,7 +171,57 @@
   }
 
   .menu {
+    height: 60vh;
     margin-top: 50px;
+  }
+
+  .upgrade{
+    background-color: #E0EDFF;
+    border-radius: 20px;
+    width: 12vw;
+    height: 19vh;
+    margin-left: 0;
+    box-shadow: 0 0 2px gray;
+  }
+  .upgrade-icon{
+    background-color: #E0EDFF;
+    border-radius: 20px;
+    width: 12vw;
+    height: 5vh;
+    /* box-shadow: 0 0 2px gray; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .upgrade-account{
+    background-color: #E0EDFF;
+    border-radius: 20px;
+    width: 12vw;
+    height: 3vh;
+    /* box-shadow: 0 0 2px gray; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .upgrade-access{
+    background-color: #E0EDFF;
+    border-radius: 20px;
+    width: 12vw;
+    height: 3vh;
+    display: flex;
+    align-items: center;
+    /* box-shadow: 0 0 2px gray; */
+    justify-content: center;
+  }
+  .upgrade-button{
+    background-color: #E0EDFF;
+    border-radius: 20px;
+    width: 12vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    /* box-shadow: 0 0 2px gray; */
+    justify-content: center;
   }
 
   .logo h6 {
