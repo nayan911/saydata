@@ -469,6 +469,14 @@
     /* box-shadow: 0 0 2px gray; */
   }
 
-  /* .delete-note{
-    
-  } */
+  .uploaded-files-count{
+    margin-top: 15px;
+    color: #344054;
+    /* box-shadow: 0 0 2px gray; */
+  }
+
+  .uploaded-files{
+    margin-top: 10px;
+    color: #475367;
+    /* box-shadow: 0 0 2px gray; */
+  }

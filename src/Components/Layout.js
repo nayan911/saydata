@@ -151,32 +151,35 @@ const Layout = () => {
                 <div className="header">
                     <div className="headerbox1 headerbox">
                         <div>
-                            <i className="fa-solid fa-money-bill" style={{fontSize: 30,color: 'green'}}></i><br></br>
-                            <span>Total Revenues</span>
+                            <i className="fa-regular fa-file" style={{fontSize: 30}}></i><br></br>
                         </div>
-                        <div className="revenuePercent">
-                            <span style={{fontSize: 30}}><b>$2,129,430</b></span>
-                            <span className="revenueStyle">+2.5%</span>
+                        <div className="uploaded-files-count">
+                            <b>{savedNotes.length}</b>
+                        </div>
+                        <div className="uploaded-files">
+                            Uploaded Files
                         </div>
                     </div>
                     <div className="headerbox2 headerbox">
                         <div>
-                            <i className="fa-solid fa-coins" style={{fontSize: 30,color: '#DEBF85'}}></i><br></br>
-                            <span>Total Transactions</span>
+                            <i className="fa-solid fa-t" style={{fontSize: 30}}></i><br></br>
                         </div>
-                        <div className="revenuePercent">
-                            <span style={{fontSize: 30}}><b>1,520</b></span>
-                            <span className="revenueStyle">+1.7%</span>
+                        <div className="uploaded-files-count">
+                            <b>{savedNotes.length}</b>
+                        </div>
+                        <div className="uploaded-files">
+                            Transcribed
                         </div>
                     </div>
                     <div className="headerbox3 headerbox">
                         <div>
-                            <i className="fa-solid fa-thumbs-up" style={{fontSize: 30,color: '#EE8484'}}></i><br></br>
-                            <span>Total Likes</span>
+                            <i className="fa-solid fa-thumbs-up" style={{fontSize: 30}}></i><br></br>
                         </div>
-                        <div className="revenuePercent">
-                            <span style={{fontSize: 30}}><b>9,721</b></span>
-                            <span className="revenueStyle">+1.4%</span>
+                        <div className="uploaded-files-count">
+                            <b>{savedNotes.length}</b>
+                        </div>
+                        <div className="uploaded-files">
+                            Saved
                         </div>
                     </div>
                 </div>
