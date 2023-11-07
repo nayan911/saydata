@@ -101,6 +101,29 @@ const Poppup = (props) => {
   { code: 'hu-HU', name: 'Hungarian' },
   ];
 
+  const downloadMp3 = (audioData, fileName) => {
+    // Create a Blob with the audio data and specify the MIME type
+    const blob = new Blob([audioData], { type: 'audio/mp3' });
+  
+    // Create a URL for the Blob
+    const url = URL.createObjectURL(blob);
+  
+    // Create an <a> element for downloading the MP3
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = fileName; // Set the filename for the download
+  
+    // Trigger the download
+    document.body.appendChild(a);
+    a.click();
+  
+    // Cleanup
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+  
+  const audioData = "data_here"; 
+
   return (
     <Dialog open={openpopup}>
       <DialogTitle style={{ width: 600 }}>
@@ -137,8 +160,11 @@ const Poppup = (props) => {
                           <p>{note}</p>
                         </div>
                         <div className='download-done'>
-                          <div><button onClick={downloadNotes} class="btn btn-primary" style={{width: 200}}>Download Notes</button></div>
-                          <div><button type="submit" class="btn btn-primary" style={{width: 200}} onClick={()=>setopenpopup(false)}>Done</button></div>
+                        <div><button onClick={() => downloadMp3(audioData, 'audio.mp3')} className="btn btn-primary" style={{ width: 150 }}>
+                          Download MP3
+                        </button></div>
+                          <div><button onClick={downloadNotes} class="btn btn-primary" style={{width: 150}}>Download Notes</button></div>
+                          <div><button type="submit" class="btn btn-primary" style={{width: 150}} onClick={()=>setopenpopup(false)}>Done</button></div>
                         </div>
                 </div>
               </>
