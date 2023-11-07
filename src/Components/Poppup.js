@@ -13,11 +13,11 @@ mic.continuous = true
 mic.interimResults = true
 
 const Poppup = (props) => {
-  const { openpopup, setopenpopup, savedNotes, setSavedNotes } = props;
+  const { openpopup, setopenpopup, savedNotes, setSavedNotes,selectedLanguage, setSelectedLanguage,selectedLanguagename, setSelectedLanguagename} = props;
 
   const [isListening, setIsListening] = useState(false)
   const [note, setNote] = useState(null)
-  const [selectedLanguage, setSelectedLanguage] = useState('en-US');
+  // const [selectedLanguage, setSelectedLanguage] = useState('en-US');
 
   useEffect(() => {
     handleListen()
@@ -136,7 +136,14 @@ const Poppup = (props) => {
               <>
                 <div className="container">
                     <div className="box">
-                      <Select style={{width: 500}} value={selectedLanguage} onChange={(event) => setSelectedLanguage(event.target.value)}>
+                    <Select style={{ width: 500 }} value={selectedLanguage} onChange={(event) => {
+                          setSelectedLanguage(event.target.value);
+                          // Update the selected language name
+                          const selectedOption = languageOptions.find(option => option.code === event.target.value);
+                          if (selectedOption) {
+                            setSelectedLanguagename(selectedOption.name);
+                          }
+                        }}>
                         {languageOptions.map((option) => (
                           <MenuItem key={option.code} value={option.code}>
                             {option.name}

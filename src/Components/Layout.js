@@ -55,6 +55,9 @@ const Layout = () => {
 
   const [savedNotes, setSavedNotes] = useState([])
 
+  const [selectedLanguage, setSelectedLanguage] = useState('en-US');
+  const [selectedLanguagename, setSelectedLanguagename] = useState('English');
+
   const handleDelete = (index) => {
     // Create a copy of the savedNotes array
     const updatedNotes = [...savedNotes];
@@ -202,7 +205,7 @@ const Layout = () => {
                         <td>
                             <input type="checkbox" />
                         </td>
-                        <td>English</td> {/* Replace with actual language */}
+                        <td>{selectedLanguagename}</td> {/* Replace with actual language */}
                         <td>{new Date().toLocaleString()}</td> {/* Replace with actual timestamp */}
                         <td>Audio</td> {/* Replace with actual file type */}
                         <td>
@@ -221,7 +224,7 @@ const Layout = () => {
             
         </div>
       </div>
-      <Poppup openpopup={openpopup} setopenpopup={setopenpopup} savedNotes={savedNotes} setSavedNotes={setSavedNotes}>
+      <Poppup openpopup={openpopup} setopenpopup={setopenpopup} savedNotes={savedNotes} setSavedNotes={setSavedNotes} selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} selectedLanguagename={selectedLanguagename} setSelectedLanguagename={setSelectedLanguagename}>
       </Poppup>
       {/* <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/> */}
     </>
