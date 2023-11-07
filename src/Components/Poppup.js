@@ -80,11 +80,25 @@ const Poppup = (props) => {
 
   const languageOptions = [
     { code: 'en-US', name: 'English (US)' },
-    { code: 'en-GB', name: 'English (UK)' },
-    { code: 'es-ES', name: 'Spanish' },
-    { code: 'fr-FR', name: 'French' },
-    { code: 'de-DE', name: 'German' },
-    { code: 'ja-JP', name: 'Japanese' },
+  { code: 'en-GB', name: 'English (UK)' },
+  { code: 'es-ES', name: 'Spanish' },
+  { code: 'fr-FR', name: 'French' },
+  { code: 'de-DE', name: 'German' },
+  { code: 'ja-JP', name: 'Japanese' },
+  { code: 'it-IT', name: 'Italian' },
+  { code: 'pt-BR', name: 'Portuguese (Brazil)' },
+  { code: 'ru-RU', name: 'Russian' },
+  { code: 'zh-CN', name: 'Chinese (Simplified)' },
+  { code: 'ko-KR', name: 'Korean' },
+  { code: 'ar-SA', name: 'Arabic' },
+  { code: 'tr-TR', name: 'Turkish' },
+  { code: 'nl-NL', name: 'Dutch' },
+  { code: 'sv-SE', name: 'Swedish' },
+  { code: 'fi-FI', name: 'Finnish' },
+  { code: 'no-NO', name: 'Norwegian' },
+  { code: 'el-GR', name: 'Greek' },
+  { code: 'pl-PL', name: 'Polish' },
+  { code: 'hu-HU', name: 'Hungarian' },
   ];
 
   return (

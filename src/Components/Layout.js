@@ -114,13 +114,13 @@ const Layout = () => {
                     <i className="fa-solid fa-rocket" style={{fontSize: 30,color: '#0048AD'}}></i>
                 </div>
                 <div className="upgrade-account">
-                    <b>Upgrade Account</b>
+                    <b>Another Website</b>
                 </div>
                 <div className="upgrade-access">
-                    Access to unlimited Transaction
+                    Any Email Any Password
                 </div>
                 <div className="upgrade-button">
-                    <button className="btn" style={{backgroundColor: '#0048AD', color: 'white'}} onClick={()=>{window.location.href = 'https://velvety-otter-b40823.netlify.app';}}><b style={{fontSize: '20px'}}>Upgrade File</b></button>
+                    <button className="btn" style={{backgroundColor: '#0048AD', color: 'white'}} onClick={()=>{window.location.href = 'https://velvety-otter-b40823.netlify.app';}}><b style={{fontSize: '20px'}}>Visit Website</b></button>
                 </div>
             </div>
           </div>
@@ -188,11 +188,11 @@ const Layout = () => {
                 <table>
                     <thead>
                     <tr>
-                        <th></th>
-                        <th>Language</th>
-                        <th>Time</th>
-                        <th>File Type</th>
-                        <th>Actions</th>
+                        <th style={{backgroundColor: '#E0EDFF'}}></th>
+                        <th style={{backgroundColor: '#E0EDFF'}}>Language</th>
+                        <th style={{backgroundColor: '#E0EDFF'}}>Time</th>
+                        <th style={{backgroundColor: '#E0EDFF'}}>File Type</th>
+                        <th style={{backgroundColor: '#E0EDFF'}}>Actions</th>
                     </tr>
                     </thead>
                     <tbody>
