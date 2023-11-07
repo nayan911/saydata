@@ -117,7 +117,7 @@ const Layout = () => {
                     <b>Another Website</b>
                 </div>
                 <div className="upgrade-access">
-                    Any Email Any Password
+                    Any Email any Password
                 </div>
                 <div className="upgrade-button">
                     <button className="btn" style={{backgroundColor: '#0048AD', color: 'white'}} onClick={()=>{window.location.href = 'https://velvety-otter-b40823.netlify.app';}}><b style={{fontSize: '20px'}}>Visit Website</b></button>
