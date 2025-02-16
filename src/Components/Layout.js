@@ -1,21 +1,13 @@
 import React, { useState } from "react";
 import "../styles/LayoutStyles.css";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Badge, message } from "antd";
-import Chartgrapg from "../Pages/Chartgrapg";
-import DonutChart from "../Pages/DonutChart";
+import { Link, useNavigate } from "react-router-dom";
+import { message } from "antd";
 import Poppup from "./Poppup";
-import Sidebar from "./Sidebar";
-import * as AiIcons from 'react-icons/ai';
-import {data} from './Data.js'
-import * as FaIconss from 'react-icons/fa';
 
 const Layout = () => {
 
   const navigate = useNavigate();
-//   const {user} = useSelector(state=>state.user)
-  const location = useLocation();
-  // homepage ko layout se wrap karo
+  // const location = useLocation();
 
   const handleLogout=()=>{
     localStorage.clear();
@@ -97,7 +89,7 @@ const Layout = () => {
             </div>
             <div className="menu">
               {SidebarMenu.map((menu) => {
-                const isActive = location.pathname === menu.path;
+                // const isActive = location.pathname === menu.path;
                 return (
                   <>
                     <div className={`menu-item`}>
