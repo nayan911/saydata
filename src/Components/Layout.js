@@ -144,7 +144,7 @@ const Layout = () => {
                 <div className="search-name">
                     <div className="app-names">
                         <div className="app-name1">
-                            <b style={{fontSize: '20px'}}>Welcome Shakirat</b><br></br>
+                            <b style={{fontSize: '20px'}}>Welcome Nayan</b><br></br>
                             Upload your audio or video to convert to text
                         </div>
                         <div className="transcribfile">
