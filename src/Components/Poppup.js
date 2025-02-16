@@ -13,7 +13,7 @@ mic.continuous = true
 mic.interimResults = true
 
 const Poppup = (props) => {
-  const { openpopup, setopenpopup, savedNotes, setSavedNotes,selectedLanguage, setSelectedLanguage,selectedLanguagename, setSelectedLanguagename} = props;
+  const { openpopup, setopenpopup, savedNotes, setSavedNotes,selectedLanguage, setSelectedLanguage, setSelectedLanguagename} = props;
 
   const [isListening, setIsListening] = useState(false)
   const [note, setNote] = useState(null)
