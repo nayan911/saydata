@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Dialog, DialogContent, DialogTitle } from '@material-ui/core';
 import { Tabs } from 'antd';
 import Select from '@material-ui/core/Select';
@@ -13,17 +13,13 @@ mic.continuous = true
 mic.interimResults = true
 
 const Poppup = (props) => {
-  const { openpopup, setopenpopup, savedNotes, setSavedNotes,selectedLanguage, setSelectedLanguage,selectedLanguagename, setSelectedLanguagename} = props;
+  const { openpopup, setopenpopup, savedNotes, setSavedNotes,selectedLanguage, setSelectedLanguage, setSelectedLanguagename} = props;
 
   const [isListening, setIsListening] = useState(false)
   const [note, setNote] = useState(null)
   // const [selectedLanguage, setSelectedLanguage] = useState('en-US');
 
-  useEffect(() => {
-    handleListen()
-  }, [isListening])
-
-  const handleListen = () => {
+  const handleListen = useCallback(() => {
     mic.lang = selectedLanguage
     if (isListening) {
       mic.start()
@@ -52,7 +48,11 @@ const Poppup = (props) => {
         console.log(event.error)
       }
     }
-  }
+  }, [isListening, selectedLanguage]);
+
+  useEffect(() => {
+    handleListen()
+  }, [isListening, handleListen])
 
   const handleSaveNote = () => {
     setSavedNotes([...savedNotes, note])
